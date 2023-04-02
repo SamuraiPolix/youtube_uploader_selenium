@@ -34,7 +34,7 @@ class YouTubeUploader:
 		self.video_path = video_path
 		self.thumbnail_path = thumbnail_path
 		self.metadata_dict = load_metadata(metadata_json_path)
-		self.browser = Firefox(profile_path=profile_path, pickle_cookies=True, full_screen=False)
+		self.browser = Firefox(profile_path=profile_path, pickle_cookies=True, full_screen=False, geckodriver_path='C:/Users/samla/AppData/Local/Programs/Python/Python311/Scripts/geckodriver.exe')
 		self.logger = logging.getLogger(__name__)
 		self.logger.setLevel(logging.DEBUG)
 		self.__validate_inputs()
